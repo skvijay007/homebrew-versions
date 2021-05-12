@@ -1,4 +1,4 @@
-# Skvijay007 Versions
+# Homebrew legacy Versions
 
 ## How do I install these formulae?
 
