@@ -8,14 +8,8 @@ class KubernetesCliAT1202 < Formula
   head "https://github.com/kubernetes/kubernetes.git"
 
   livecheck do
-    url :head
-    regex(/^v([\d.]+)$/i)
-  end
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "58049cbdcae1b674d62aa1ad4cb5d9b667ac01080574c0fe5c9e126f8fde1eb6"
-    sha256 cellar: :any_skip_relocation, catalina: "a01f3291281baa941148b50d733278059c13db4da4e0480019fd841eeb441322"
-    sha256 cellar: :any_skip_relocation, mojave:   "22d9642cbe12a6284e4285e395f3d6e7c7fa477600dc8d31d00d6da88beee33f"
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on "go" => :build
